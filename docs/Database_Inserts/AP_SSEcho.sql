@@ -1,0 +1,2 @@
+INSERT INTO playlist (cur_id, plat_id, playlistGrouping, playlistName, embedLink)
+VALUES ('1', '2', 'Songstress Echo', 'Songstress Echo v1 & v2', 'https://embed.music.apple.com/us/playlist/songstress-echo-v1-v2/pl.u-d2b08rYTM9om0M')
