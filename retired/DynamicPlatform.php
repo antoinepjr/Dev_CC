@@ -5,11 +5,11 @@
 	<link rel="stylesheet" href="v1StyleSheet.css">
 	<script src="script.js"></script>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "sqlrootPASS!";
-$dbname = "v3_cc";
-$port = "3306";
+$servername = "";
+$username = "";
+$password = "!";
+$dbname = "";
+$port = "";
 try {
 //mySQL Connection String 
 //Create Connection
