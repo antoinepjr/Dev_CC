@@ -2,11 +2,11 @@
 
 phpinfo();
 
-$servername = "localhost";
-$username = "cultuuh3_ADMIN";
-$password = "~SomethingLikeThis1990*";
-$dbname = "cultuuh3_v3_cc";
-$port = "3306";
+$servername = "";
+$username = "";
+$password = "~*";
+$dbname = "";
+$port = "";
 /*//PDO Connection String
 try {
 //Create Connection 
