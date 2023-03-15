@@ -8,8 +8,8 @@
 	<script src="script.js"></script><?php
 try {
 	//Connect to MongoDB Client 
-	$manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-	//$manager = new MongoDB\Driver\Manager("mongodb+srv://bassclef:iloveLP29%21@sandbox1-ppowj.azure.mongodb.net/test?retryWrites=true&w=majority");
+	$manager = new MongoDB\Driver\Manager("mongodb://");
+	//$manager = new MongoDB\Driver\Manager("mongodb+srv:/21@sandbox1-ppowj.azure.mongodb.net/test?retryWrites=true&w=majority");
 
 	//Create filter for '_id' retrival
 	$filter = [];
