@@ -5,11 +5,11 @@
 	<link rel="stylesheet" href="v1StyleSheet.css">
 	<script src="script.js"></script>
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "sqlrootPASS!";
-$dbname = "v3_cc";
-$port = "3306";
+$servername = "";
+$username = "";
+$password = "!";
+$dbname = "";
+$port = "";
 try {
 	//Retrieve 'id' from post page to list out curators playlists
 	$id = $_GET["id"];
@@ -39,26 +39,14 @@ try {
 	//echo "\n";
 
 	//$cursor = $manager->executeQuery("v4_Prototype.curator", $query);
-	$sql = "SELECT DISTINCT A.playlistGrouping, A.playlistName, A.embedLink 
-	        FROM playlist A 
-			INNER JOIN curator B ON B.cur_id = A.cur_id 
-			INNER JOIN platform C ON C.plat_id = A.plat_id 
-			WHERE A.playlistGrouping = '".$grouping."' 
-			AND B.userName = '".$name."' 
-			AND C.platform = '".$platform."'";
+	$sql = "SELECT DISTINCT A.playlistGrouping, A.playlistName, A.embedLink ";
 			
 	$result = mysqli_query($conn, $sql);
 	
 	//Retrieve same playlist from different platforms for link use
 	//$cursor2 = $manager->executeQuery("v4_Prototype.curator", $query);
 	$sql = "SELECT COUNT(*), A.playlistGrouping, C.platform, C.plat_id
-			FROM playlist A 
-			INNER JOIN curator B ON B.cur_id = A.cur_id
-			INNER JOIN platform C ON C.plat_id = A.plat_id
-			WHERE B.userName = '".$name."'
-			AND C.plat_id <> '".$id."'
-			AND A.playlistGrouping = '".$grouping."'
-			GROUP BY A.playlistGrouping, C.platform, C.plat_id";
+
 
 	$result2 = mysqli_query($conn, $sql);
 } catch (Exception $e) {
